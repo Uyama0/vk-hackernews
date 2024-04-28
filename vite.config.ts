@@ -34,7 +34,10 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      src: "/src",
+      app: "/src/app",
+      entities: "/src/entities",
+      pages: "/src/pages",
+      widgets: "/src/widgets",
     },
   },
 

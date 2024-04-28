@@ -10,7 +10,7 @@ import { AdaptivityProvider, ConfigProvider, AppRoot } from "@vkontakte/vkui";
 import { RouterProvider } from "@vkontakte/vk-mini-apps-router";
 import "@vkontakte/vkui/dist/vkui.css";
 
-import { transformVKBridgeAdaptivity } from "../utils";
+import { transformVKBridgeAdaptivity } from "./utils";
 import { router } from "./provider/routerProvider";
 import { App } from "./App";
 

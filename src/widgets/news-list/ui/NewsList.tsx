@@ -1,9 +1,8 @@
 import { FC, useEffect, useState } from "react";
 
 import { fetchNews } from "../api/fetchers";
-
-import { NewsCard } from "@/entities/newsCard";
-import { TNewsCard } from "@/entities/newsCard/model/types";
+import { TNewsCard } from "entities/newsCard/model/types";
+import { NewsCard } from "entities/newsCard";
 
 export const NewsList: FC = () => {
   const [newsFeed, setNewsFeed] = useState<TNewsCard[]>([]);
