@@ -1,14 +1,26 @@
-import { createHashRouter } from "@vkontakte/vk-mini-apps-router";
+import {
+  RoutesConfig,
+  createPanel,
+  createRoot,
+  createView,
+  createHashRouter,
+} from "@vkontakte/vk-mini-apps-router";
 
-export const router = createHashRouter([
-  {
-    path: "/",
-    panel: "home",
-    view: "default_view",
-  },
-  {
-    path: "/news/:id",
-    panel: "news",
-    view: "default_view",
-  },
+export enum NewsPanel {
+  Feed = "/",
+}
+
+export enum NewsView {
+  Main = "main",
+}
+
+const NEWS_ROOT = "news";
+export const INITIAL_URL = "/";
+
+export const routes = RoutesConfig.create([
+  createRoot(NEWS_ROOT, [
+    createView(NewsView.Main, [createPanel(NewsPanel.Feed, "/", [])]),
+  ]),
 ]);
+
+export const router = createHashRouter(routes.getRoutes());
