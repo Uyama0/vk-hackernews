@@ -3,7 +3,7 @@ import { FC } from "react";
 import { Root, View } from "@vkontakte/vkui";
 import { useActiveVkuiLocation } from "@vkontakte/vk-mini-apps-router";
 
-import { NewsView, NewsPanel } from "../provider/routerProvider";
+import { NewsView, NewsPanel } from "../routerProvider/routerProvider";
 
 import { Feed } from "../../pages/feed/ui/Feed";
 
