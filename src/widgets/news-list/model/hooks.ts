@@ -25,7 +25,7 @@ const useNewsData = () => {
     fetchData();
     const intervalId = setInterval(() => {
       fetchData();
-    }, 10000);
+    }, 60000);
     return () => clearInterval(intervalId);
   }, []);
 
