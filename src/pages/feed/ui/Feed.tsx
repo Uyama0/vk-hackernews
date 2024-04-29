@@ -1,9 +1,15 @@
 import { FC } from "react";
 
-import { NavIdProps, Panel } from "@vkontakte/vkui";
+import { NavIdProps } from "@vkontakte/vkui";
 
-import { NewsList } from "../../../widgets/news-list/ui/NewsList";
+import { NewsList } from "widgets/news-list/ui/NewsList";
+import { FeedHeader } from "entities/feedHeader";
 
-export const Feed: FC<NavIdProps> = (props: NavIdProps) => {
-  return <NewsList />;
+export const Feed: FC<NavIdProps> = () => {
+  return (
+    <>
+      <FeedHeader />
+      <NewsList />
+    </>
+  );
 };
