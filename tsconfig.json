@@ -5,7 +5,9 @@
       "app/*": ["app/*"],
       "entities/*": ["entities/*"],
       "pages/*": ["pages/*"],
-      "widgets/*": ["widgets/*"]
+      "widgets/*": ["widgets/*"],
+      "features/*": ["features/*"],
+      "shared/*": ["shared/*"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -29,5 +31,4 @@
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
-  
 }

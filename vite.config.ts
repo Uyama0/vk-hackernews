@@ -38,6 +38,8 @@ export default defineConfig({
       entities: "/src/entities",
       pages: "/src/pages",
       widgets: "/src/widgets",
+      features: "/src/features",
+      shared: "/src/shared",
     },
   },
 
