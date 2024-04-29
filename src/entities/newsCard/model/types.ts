@@ -3,4 +3,5 @@ export type TNewsCard = {
   points: number;
   author: string;
   created_at: string;
+  story_id: number;
 };
