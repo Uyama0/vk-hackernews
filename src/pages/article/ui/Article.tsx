@@ -14,7 +14,6 @@ export const Article: FC<NavIdProps> = () => {
   const BASE_URL = `https://hacker-news.firebaseio.com/v0/item/${articleId}.json`;
 
   const { articleData, isLoading, error } = useFetchNewsArticle(BASE_URL);
-  console.log(articleData);
 
   return (
     <>

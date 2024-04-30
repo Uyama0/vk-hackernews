@@ -12,7 +12,6 @@ export const NewsList: FC = () => {
   const newsData = useAppSelector((state) => state.getFeed.newsFeed);
   if (isLoading) {
   }
-  console.log(newsData);
 
   return (
     <main className={styles.news_feed}>
