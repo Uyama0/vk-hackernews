@@ -34,11 +34,11 @@ export const AppConfig = () => {
     >
       <AdaptivityProvider {...adaptivity}>
         <AppRoot mode="full" safeAreaInsets={vkBridgeInsets}>
-          <RouterProvider router={router}>
-            <Provider store={store}>
+          <Provider store={store}>
+            <RouterProvider router={router}>
               <App />
-            </Provider>
-          </RouterProvider>
+            </RouterProvider>
+          </Provider>
         </AppRoot>
       </AdaptivityProvider>
     </ConfigProvider>

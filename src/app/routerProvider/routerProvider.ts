@@ -8,6 +8,7 @@ import {
 
 export enum NewsPanel {
   Feed = "/",
+  Article = "article",
 }
 
 export enum NewsView {
@@ -19,7 +20,10 @@ export const INITIAL_URL = "/";
 
 export const routes = RoutesConfig.create([
   createRoot(NEWS_ROOT, [
-    createView(NewsView.Main, [createPanel(NewsPanel.Feed, "/", [])]),
+    createView(NewsView.Main, [
+      createPanel(NewsPanel.Feed, "/", []),
+      createPanel(NewsPanel.Article, `/${NewsPanel.Article}`, []),
+    ]),
   ]),
 ]);
 
