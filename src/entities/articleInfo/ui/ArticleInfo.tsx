@@ -15,20 +15,18 @@ export const ArticleInfo: FC<TNewsArticle> = ({
 }) => {
   const validDate = convertDate(time);
   return (
-    <Div>
-      <Banner
-        header={
-          <Div>
-            <span>{title}</span>
-            <Link href={url}>{shortUrl(url)}</Link>
-          </Div>
-        }
-        subheader={
-          <Div>
-            <span>{validDate}</span> | <span>{by}</span> | <span>{score}</span>
-          </Div>
-        }
-      ></Banner>
-    </Div>
+    <Banner
+      header={
+        <Div>
+          <span>{title}</span>
+          <Link href={url}>{shortUrl(url)}</Link>
+        </Div>
+      }
+      subheader={
+        <Div>
+          <span>{validDate}</span> | <span>{by}</span> | <span>{score}</span>
+        </Div>
+      }
+    ></Banner>
   );
 };
