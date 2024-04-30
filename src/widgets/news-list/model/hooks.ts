@@ -4,8 +4,6 @@ import { useAppDispatch } from "app/storeProvider/model/hooks";
 import { fetchNewsData } from "app/storeProvider/slices/newsFeedSlice";
 
 const useNewsData = () => {
-  console.log(1);
-
   const dispatch = useAppDispatch();
 
   const [isLoading, setIsLoading] = useState(true);
@@ -25,7 +23,7 @@ const useNewsData = () => {
     fetchData();
     const intervalId = setInterval(() => {
       fetchData();
-    }, 60000);
+    }, 5000);
     return () => clearInterval(intervalId);
   }, []);
 

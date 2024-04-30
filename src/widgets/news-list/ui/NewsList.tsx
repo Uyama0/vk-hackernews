@@ -10,9 +10,9 @@ import styles from "./styles.module.css";
 export const NewsList: FC = () => {
   const { isLoading, error } = useNewsData();
   const newsData = useAppSelector((state) => state.getFeed.newsFeed);
-
   if (isLoading) {
   }
+  console.log(newsData);
 
   return (
     <main className={styles.news_feed}>
@@ -22,7 +22,7 @@ export const NewsList: FC = () => {
           title={news.title}
           points={news.points}
           author={news.author}
-          created_at={news.created_at}
+          created_at_i={news.created_at_i}
           story_id={news.story_id}
         />
       ))}
