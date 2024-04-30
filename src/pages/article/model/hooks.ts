@@ -6,7 +6,9 @@ import { TNewsArticle } from "entities/articleInfo/model/types";
 export const useFetchNewsArticle = (BASE_URL: string) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
-  const [articleData, setArticleData] = useState<TNewsArticle>({} as TNewsArticle);
+  const [articleData, setArticleData] = useState<TNewsArticle>(
+    {} as TNewsArticle
+  );
 
   const fetchData = async () => {
     try {

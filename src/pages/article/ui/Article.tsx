@@ -17,8 +17,12 @@ export const Article: FC<NavIdProps> = () => {
 
   return (
     <>
-      <ArticleInfo {...articleData} />
-      <CommentsList />
+      {!isLoading && (
+        <>
+          <ArticleInfo {...articleData} />
+          <CommentsList {...articleData} />
+        </>
+      )}
     </>
   );
 };
