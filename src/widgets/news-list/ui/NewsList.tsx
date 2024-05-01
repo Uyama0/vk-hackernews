@@ -1,11 +1,9 @@
 import { FC } from "react";
-import { useAppSelector } from "app/storeProvider/model/hooks";
 
+import { useAppSelector } from "app/storeProvider/model/hooks";
 import useNewsData from "../model/hooks";
 import { TNewsCard } from "entities/newsCard/model/types";
 import { NewsCard } from "entities/newsCard";
-
-import styles from "./styles.module.css";
 
 export const NewsList: FC = () => {
   const { isLoading, error } = useNewsData();
@@ -14,7 +12,7 @@ export const NewsList: FC = () => {
   }
 
   return (
-    <main className={styles.news_feed}>
+    <>
       {newsData.map((news: TNewsCard) => (
         <NewsCard
           key={news.story_id}
@@ -25,6 +23,6 @@ export const NewsList: FC = () => {
           story_id={news.story_id}
         />
       ))}
-    </main>
+    </>
   );
 };

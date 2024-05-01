@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Banner, Div, Link } from "@vkontakte/vkui";
+import { Banner, Div, Link, Spacing } from "@vkontakte/vkui";
 
 import { TNewsArticle } from "../model/types";
 import { shortUrl } from "shared/lib/shortUrl";
@@ -15,18 +15,23 @@ export const ArticleInfo: FC<TNewsArticle> = ({
 }) => {
   const validDate = convertDate(time);
   return (
-    <Banner
-      header={
-        <Div>
-          <span>{title}</span>
-          <Link href={url}>{shortUrl(url)}</Link>
-        </Div>
-      }
-      subheader={
-        <Div>
-          <span>{validDate}</span> | <span>{by}</span> | <span>{score}</span>
-        </Div>
-      }
-    ></Banner>
+    <>
+      <Banner
+        header={
+          <Div>
+            {title} |
+            <Link style={{ marginLeft: 8 }} href={url}>
+              {shortUrl(url)}
+            </Link>
+          </Div>
+        }
+        subheader={
+          <Div>
+            <span>{validDate}</span> | <span>{by}</span> | <span>{score}</span>
+          </Div>
+        }
+      ></Banner>
+      <Spacing />
+    </>
   );
 };

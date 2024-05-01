@@ -6,7 +6,7 @@ import { TCommentCard } from "shared/types/types";
 export const Comment: FC<TCommentCard> = ({ by, kids, text, deleted }) => {
   return (
     <>
-      {!deleted && (
+      {!deleted  && (
         <>
           <ContentCard subtitle={by} text={text} />
           <Spacing />
