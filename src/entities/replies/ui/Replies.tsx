@@ -1,26 +1,12 @@
 import { FC, useState, useEffect } from "react";
 
 import { TRepliesKids } from "../model/types";
-import { TReplies } from "../model/types";
 
-import { getCommentReplies } from "../api/fetchers";
-
+import { useFetchReplies } from "../model/hooks";
 import styles from "./styles.module.css";
-import { ContentCard, Div, SimpleCell } from "@vkontakte/vkui";
 
 export const Replies: FC<TRepliesKids> = ({ kids }) => {
-  const [replies, setReplies] = useState<TReplies[]>([]);
-
-  useEffect(() => {
-    const fetchReplies = async () => {
-      const repliesData = await Promise.all(
-        kids.map((kid) => getCommentReplies(kid))
-      );
-      setReplies(repliesData);
-    };
-
-    fetchReplies();
-  }, [kids]);
+  const { replies } = useFetchReplies(kids);
 
   return (
     <>

@@ -5,14 +5,14 @@ import { Group, SimpleCell } from "@vkontakte/vkui";
 import { ArticleUpdateButton } from "features/articleUpdateButton.tsx";
 import { BrowserBackButton } from "features/browserBackButton";
 
-export const ArticleHeader: FC<TArticleHeader> = ({handleRefreshData}) => {
+export const ArticleHeader: FC<TArticleHeader> = ({ handleRefreshData }) => {
   return (
     <Group>
       <SimpleCell
         after={
           <>
             <BrowserBackButton />
-            <ArticleUpdateButton handleRefreshData={handleRefreshData}/>
+            <ArticleUpdateButton handleRefreshData={handleRefreshData} />
           </>
         }
       >

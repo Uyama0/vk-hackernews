@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 
-import { ContentCard, Spacing, Group, CellButton } from "@vkontakte/vkui";
+import { ContentCard, Spacing, CellButton } from "@vkontakte/vkui";
 import { Icon24Add } from "@vkontakte/icons";
 
 import { TCommentCard } from "./model/types";
