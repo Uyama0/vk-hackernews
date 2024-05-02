@@ -1,0 +1,3 @@
+interface TArticleUpdateButton {
+  handleRefreshData: () => void;
+}

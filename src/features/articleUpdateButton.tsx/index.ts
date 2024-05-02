@@ -1,1 +1,1 @@
-export { articleUpdateButton } from "./ui/articleUpdateButton";
+export { ArticleUpdateButton } from "./ui/ArticleUpdateButton";

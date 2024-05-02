@@ -1,0 +1,3 @@
+interface TArticleHeader {
+  handleRefreshData: () => void;
+}

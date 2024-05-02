@@ -15,10 +15,6 @@ export const CommentsList: FC<TNewsArticle> = ({ kids }) => {
     if (commentsData) setTotalCommentsCount(commentsData.length);
   }, [commentsData]);
 
-  const updateTotalCommentsCount = (newComments: TCommentsData[]) => {
-    setTotalCommentsCount((prevCount) => prevCount + newComments.length);
-  };
-
   return (
     <Group>
       <Headline style={{ marginLeft: 16 }}>

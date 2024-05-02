@@ -25,5 +25,9 @@ export const useFetchNewsArticle = (BASE_URL: string) => {
     fetchData();
   }, []);
 
-  return { articleData, isLoading, error };
+  const refreshData = () => {
+    fetchData();
+  };
+
+  return { articleData, isLoading, error, refreshData };
 };
