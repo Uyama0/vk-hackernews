@@ -4,16 +4,25 @@ import { CardGrid, Group, Headline, Spacing, Separator } from "@vkontakte/vkui";
 
 import { TNewsArticle } from "entities/articleInfo/model/types";
 import { useFetchComments } from "../model/hooks";
+import { getAllNewsComments } from "../api/fetchers";
 import { Comment } from "entities/comment";
-import { TCommentsData } from "../model/types";
 
 export const CommentsList: FC<TNewsArticle> = ({ kids }) => {
-  const { commentsData, isLoading, error } = useFetchComments(kids);
+  const { commentsData } = useFetchComments(kids);
   const [totalCommentsCount, setTotalCommentsCount] = useState(0);
 
+  const fetchTotalKidsCount = async () => {
+    try {
+      const totalKids = await getAllNewsComments(kids);
+      setTotalCommentsCount(totalKids);
+    } catch (error) {
+      console.error("Error fetching total kids count:", error);
+    }
+  };
+
   useEffect(() => {
-    if (commentsData) setTotalCommentsCount(commentsData.length);
-  }, [commentsData]);
+    fetchTotalKidsCount();
+  }, [kids]);
 
   return (
     <Group>

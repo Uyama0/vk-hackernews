@@ -26,7 +26,7 @@ export const useFetchComments = (comments: number[]) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [comments]);
 
   return { commentsData, isLoading, error };
 };

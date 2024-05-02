@@ -6,7 +6,7 @@ import { TNewsCard } from "entities/newsCard/model/types";
 import { NewsCard } from "entities/newsCard";
 
 export const NewsList: FC = () => {
-  const { isLoading, error } = useNewsData();
+  const { isLoading } = useNewsData();
   const newsData = useAppSelector((state) => state.getFeed.newsFeed);
   if (isLoading) {
   }
